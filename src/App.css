@@ -11,3 +11,13 @@
   margin-right: 4px;
   border-radius: 5px;
 }
+
+.form,
+textarea {
+  margin: 15px;
+  height: 20px;
+  text-indent: 10px;
+  border: 1px solid #444;
+  border-radius: 5px;
+  display: block;
+}
