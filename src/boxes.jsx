@@ -5,7 +5,7 @@ export default [
   },
   {
     id: 2,
-    on: false,
+    on: true,
   },
   {
     id: 3,
@@ -17,10 +17,10 @@ export default [
   },
   {
     id: 5,
-    on: false,
+    on: true,
   },
   {
     id: 6,
-    on: false,
+    on: true,
   },
 ];
