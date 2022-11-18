@@ -9,9 +9,13 @@ export default function Form() {
     comments: "",
     isFriendly: true,
     employment: "",
+    favColor: "",
   });
 
+  console.log(formData.favColor);
+
   function handleChange(event) {
+    console.log(event);
     const { name, value, type, checked } = event.target;
     setFormData((prevFormData) => {
       return {
@@ -53,6 +57,8 @@ export default function Form() {
         onChange={handleChange}
         name="comments"
       />
+
+      <br />
       <input
         type="checkbox"
         id="isFriendly"
@@ -98,6 +104,25 @@ export default function Form() {
         <label htmlFor="full-time">Full-time</label>
         <br />
       </fieldset>
+
+      <br />
+      <label htmlFor="favColor">What is your favorite color?</label>
+      <br />
+      <select
+        id="favColor"
+        value={formData.favColor}
+        onChange={handleChange}
+        name="favColor"
+      >
+        <option value="">-- Choose --</option>
+        <option value="red">Red</option>
+        <option value="orange">Orange</option>
+        <option value="yellow">Yellow</option>
+        <option value="green">Green</option>
+        <option value="blue">Blue</option>
+        <option value="indigo">Indigo</option>
+        <option value="violet">Violet</option>
+      </select>
     </form>
   );
 }
