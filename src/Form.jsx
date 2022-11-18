@@ -12,10 +12,9 @@ export default function Form() {
     favColor: "",
   });
 
-  console.log(formData.favColor);
+  //console.log(formData.favColor);
 
   function handleChange(event) {
-    console.log(event);
     const { name, value, type, checked } = event.target;
     setFormData((prevFormData) => {
       return {
@@ -25,8 +24,13 @@ export default function Form() {
     });
   }
 
+  function handleSubmit(event) {
+    event.preventDefault();
+    console.log(formData);
+  }
+
   return (
-    <form>
+    <form onSubmit={handleSubmit}>
       <input
         className="form"
         type="text"
@@ -68,6 +72,8 @@ export default function Form() {
       />
       <label htmlFor="isFriendly">Are you friendly?</label>
 
+      <br />
+      <br />
       <fieldset>
         <legend>Current employment status</legend>
 
@@ -123,6 +129,10 @@ export default function Form() {
         <option value="indigo">Indigo</option>
         <option value="violet">Violet</option>
       </select>
+
+      <br />
+      <br />
+      <button>Submit</button>
     </form>
   );
 }
