@@ -12,8 +12,6 @@ export default function Form() {
     favColor: "",
   });
 
-  //console.log(formData.favColor);
-
   function handleChange(event) {
     const { name, value, type, checked } = event.target;
     setFormData((prevFormData) => {
